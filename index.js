@@ -207,21 +207,21 @@ const artists = [
 
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
-// console.log(artists[0].name);
-// console.log(artists[2].bio);
+console.log(artists[0].name);
+console.log(artists[2].bio);
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-// function newName(num){
-//   const targetArtist = artists[num].name;
-//   const splitName = targetArtist.split(' ');
-//   const cutName = splitName.slice(0, 2);
-//   cutName.push('Gogh');
-//   const stringName = cutName.join(' ');
-//   return stringName;
-// }
+function newName(num){
+  const targetArtist = artists[num].name;
+  const splitName = targetArtist.split(' ');
+  const cutName = splitName.slice(0, 2);
+  cutName.push('Gogh');
+  const stringName = cutName.join(' ');
+  return stringName;
+}
 
-// console.log(newName(8));
+console.log(newName(8));
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -231,12 +231,12 @@ const artists = [
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-// function getArtistByIndex(id, name) {
-//     return `The artist at index ${id} is ${artists[id].name}`
-//   }
+function getArtistByIndex(id, name) {
+    return `The artist at index ${id} is ${artists[id].name}`
+  }
   
-//   console.log(getArtistByIndex(3));
-//   console.log(getArtistByIndex(4));
+console.log(getArtistByIndex(3));
+console.log(getArtistByIndex(4));
   /**
 
 
@@ -269,14 +269,13 @@ console.log(get20s(1900,2000))
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-// function removeArtist(arr, id) {
-//     /* code here */
-//     arr.splice(id,1);
-//     return arr.length;
-// }
+function removeArtist(arr, id) {
+    arr.splice(id,1);
+    return arr.length;
+}
   
-// console.log(removeArtist(artists, 0))
-// console.log(removeArtist(artists, 1))
+console.log(removeArtist(artists, 0))
+console.log(removeArtist(artists, 1))
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
@@ -291,21 +290,21 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should console.log() the new array with information added"*/
 
-// const lastArtist = [{
-//   "id": 21,
-//   "name": "Jean-Michel Basquiat", 
-//   "years": "1960-1988",
-//   "genre": "Painter", 
-//   "nationality": "American",
-//   "bio": "An American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums internationally. The Whitney Museum of American Art held a retrospective of his art in 1992."
-// }]
+const lastArtist = [{
+  "id": 21,
+  "name": "Jean-Michel Basquiat", 
+  "years": "1960-1988",
+  "genre": "Painter", 
+  "nationality": "American",
+  "bio": "An American artist of Haitian and Puerto Rican descent. Basquiat first achieved fame as part of SAMO, an informal graffiti duo who wrote enigmatic epigrams in the cultural hotbed of the Lower East Side of Manhattan during the late 1970s, where rap, punk, and street art coalesced into early hip-hop music culture. By the 1980s, his neo-expressionist paintings were being exhibited in galleries and museums internationally. The Whitney Museum of American Art held a retrospective of his art in 1992."
+}]
 
-// function addArtist(arr){
-//   arr.push(lastArtist[0]);
-//   return arr;
-// }
+function addArtist(arr){
+  arr.push(lastArtist[0]);
+  return arr;
+}
 
-// console.log(addArtist(artists));
+console.log(addArtist(artists));
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -315,18 +314,18 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-// function lotsOfArt(arr){
-//   const names = [];
+function lotsOfArt(arr){
+  const names = [];
 
-//   for(let i = 0; i < arr.length; i++){
-//     if(arr[i].paintings > 100){
-//       names.push(arr[i].name);
-//     } 
-//   }
-//   return names;
-// }
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i].paintings > 100){
+      names.push(arr[i].name);
+    } 
+  }
+  return names;
+}
 
-// console.log(lotsOfArt(artists));
+console.log(lotsOfArt(artists));
 
 
 
